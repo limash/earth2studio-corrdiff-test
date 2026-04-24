@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
 [project]
 name = "earth2studio-corrdiff-test"
 version = "0.1.0"
@@ -10,6 +14,9 @@ dependencies = [
     "cartopy",
     "matplotlib",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/earth2studio_corrdiff_test"]
 
 [tool.uv.sources]
 earth2studio = { git = "https://github.com/NVIDIA/earth2studio.git", rev = "0.12.1" }
